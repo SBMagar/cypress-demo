@@ -1,11 +1,20 @@
-name: End-to-end tests
+name: christianfei-devblog build
 on: [push]
 jobs:
-  cypress-run:
-    runs-on: ubuntu-latest
+  build_deploy:
+    runs-on: ubuntu-18.04
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-
-      - name: Cypress run
+      - uses: actions/checkout@master
+        with:
+          ref: refs/heads/master
+      - name: install
+        run: |
+          npm install
+      - name: build
+        run: |
+          npm run build
+      - name: start server
+        run: |
+           npm start &
+      - name: uat
         uses: cypress-io/github-action@v1
