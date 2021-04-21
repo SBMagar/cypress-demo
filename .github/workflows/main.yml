@@ -4,17 +4,13 @@ jobs:
   build_deploy:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@dev
         with:
-          ref: refs/heads/master
+          ref: refs/heads/dev
       - name: install
         run: |
-          npm install
-      - name: build
-        run: |
-          npm run build
-      - name: start server
-        run: |
-           npm start &
+          npm cypress install
       - name: uat
         uses: cypress-io/github-action@v1
+        run: |
+          npx run cypress
