@@ -12,4 +12,4 @@ jobs:
           npm install cypress
       - name: uat
         run: |
-          npx run cypress
+          npx cypress run --spec "cypress/integration/examples/test.spec.js"
