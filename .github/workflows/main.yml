@@ -11,6 +11,5 @@ jobs:
         run: |
           npm cypress install
       - name: uat
-        uses: cypress-io/github-action@v1
         run: |
           npx run cypress
