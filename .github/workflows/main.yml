@@ -1,4 +1,4 @@
-name: christianfei-devblog build
+name: sagar's build
 on: [push]
 jobs:
   build_deploy:
@@ -9,7 +9,7 @@ jobs:
           ref: refs/heads/dev
       - name: install
         run: |
-          npm cypress install
+          npm install cypress
       - name: uat
         run: |
           npx run cypress
