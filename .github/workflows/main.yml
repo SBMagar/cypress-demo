@@ -4,7 +4,7 @@ jobs:
   build_deploy:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@dev
+      - uses: actions/checkout@v1
         with:
           ref: refs/heads/dev
       - name: install
