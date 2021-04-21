@@ -8,8 +8,4 @@ describe('Test E-Commerce', () =>
         cy.get('#twotabsearchtextbox').type('Shoes')
         cy.get('#nav-search-submit-button').click()
         })
-
-    it('Navigate to the cart', () => {
-        cy.get('#nav-cart').click()
-            })
 })
